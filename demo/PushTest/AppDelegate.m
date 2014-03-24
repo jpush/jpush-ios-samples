@@ -162,7 +162,7 @@
     [_connectedStatusLabel setFont:[UIFont boldSystemFontOfSize:12]];
     _connectedStatusLabel.textAlignment =  NSTextAlignmentLeft;
     [_connectedStatusLabel setNumberOfLines:0];
-    [_connectedStatusLabel setText:@"未连接。。。"];
+    [_connectedStatusLabel setText:@"未连接"];
     [self.window addSubview:_connectedStatusLabel];
     
     _versionLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 196, 110, 14)];
@@ -266,8 +266,8 @@
 }
 
 - (void)networkDidClose:(NSNotification *)notification {
-    [_connectedStatusLabel setText:@"未连接。。。"];
-    NSLog(@"未连接。。。");
+    [_connectedStatusLabel setText:@"未连接"];
+    NSLog(@"未连接");
 }
 
 - (void)networkDidRegister:(NSNotification *)notification {
